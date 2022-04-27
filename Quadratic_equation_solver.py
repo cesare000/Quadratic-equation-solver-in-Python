@@ -12,16 +12,11 @@ def pura():
 
 
 def spuria():
-	n = int(input('n: '))
 	a = int(input('a: '))
-	if n < 0:
-		print('The equation is impossible')
-	elif a < 0:
-		print('The equation is impossible')
-	else:
-		x_1 = math.sqrt(n/a)
-		x_2 = math.sqrt(n/a) * (-1)
-		print(f'x1= {x_1}, x2 = {x_2}')
+	b = int(input('b: '))
+	x_1 = 0
+	x_2 = (b * (-1)/a) 
+	print(f'x1= {x_1}, x2 = {x_2}')
 
 
 def quadratic_formula():
@@ -30,7 +25,7 @@ def quadratic_formula():
 	c = int(input('c: '))
 	delta = (b**2 - 4*a*c)
 
-	print(a, b, c)
+	
 
 	if delta < 0:
 		print('The equation is impossible')
@@ -44,13 +39,10 @@ def quadratic_formula():
 while True:
 	equation_type = int(input('''Which is your equation?
 	1) x**2 = n
-	2) ax**2 = n
+	2) ax**2 + bx = 0
 	3) ax**2 + bx + c = 0
 	Type in the number of your equation: '''))
 
-
-
-	print(equation_type)
 
 	if equation_type == 1:
 		pura()
@@ -60,7 +52,6 @@ while True:
 		quadratic_formula()
 
 	choice = str(input('Do you want me to solve a new equation for you? [y/n]'))
-	print(choice)
 
 	if choice == "n":
 		break
@@ -71,5 +62,8 @@ while True:
 
 
 	
+
+
+
 
 
